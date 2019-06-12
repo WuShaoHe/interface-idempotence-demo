@@ -1,0 +1,4 @@
+rootProject.name = 'interface-idempotence-demo'
+
+include 'server'
+include 'spring-admin-server'

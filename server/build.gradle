@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+
+dependencies{
+
+    
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    //aop
+    compile("org.springframework.boot:spring-boot-starter-aop:$springBootVersion")
+    
+    //undertow
+    compile("org.springframework.boot:spring-boot-starter-undertow:$springBootVersion")
+
+    //redis
+    compile("org.springframework.boot:spring-boot-starter-data-redis:$springBootVersion")
+    
+    //监控服务
+    compile("de.codecentric:spring-boot-admin-starter-client:1.5.7")
+    
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+
+}
+
+configurations {
+    compile.exclude module: "spring-boot-starter-tomcat"
+}
